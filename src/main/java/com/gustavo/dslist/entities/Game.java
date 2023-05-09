@@ -9,22 +9,24 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Entity
-@Table(name = "tb_game")
+@Entity // é para tornar a classe uma entidade no banco de dados
+@Table(name = "tb_game")// nome da tabela
 public class Game {
 
+	// fizemos o id receber um id no banco e auto increment
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String title;
 	
-	@Column(name = "game_year")
+	@Column(name = "game_year") // trocando o nome year por game_year, pois year é uma palavra reservada no banco
 	private Integer year;
 	private String genre;
 	private String platforms;
 	private Double score;
 	private String imgUrl;
 	
+	// fazendo a descrição receber um tipo TEXT
 	@Column(columnDefinition = "TEXT")
 	private String shortDescription;
 
@@ -119,6 +121,7 @@ public class Game {
 		this.longDescription = longDescription;
 	}
 
+	// comparar id's ou games
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
