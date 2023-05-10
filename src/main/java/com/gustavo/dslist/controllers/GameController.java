@@ -22,7 +22,7 @@ public class GameController {
 	
 	@GetMapping // mapeando o método como um Get 
 	public List<GameMinDTO> findAll(){
-		List<GameMinDTO> result = gameService.finAll();
+		List<GameMinDTO> result = gameService.findAll();
 		return result;
 	}
 	
