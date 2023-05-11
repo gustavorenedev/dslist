@@ -6,7 +6,7 @@ public interface GameMinProjection {
 	// pegando todas as propriedades do GameRepository
 	Long getId();
 	String getTitle();
-	Integer getYear();
+	Integer getGameYear();
 	String getImgUrl();
 	String getShortDescription();
 	Integer getPosition();
