@@ -23,7 +23,7 @@ public class GameListController {
 	@Autowired
 	private GameService gameService;
 	
-	@GetMapping // mapeando o método como um Get 
+	@GetMapping
 	public List<GameListDTO> findAll(){
 		List<GameListDTO> result = gameListService.finAll();
 		return result;
@@ -31,7 +31,6 @@ public class GameListController {
 	
 	@GetMapping(value = "/{listId}/games") // 
 	public List<GameMinDTO> findByList(@PathVariable Long listId){
-		// filtrando pela lista do id qual o genero do game
 		List<GameMinDTO> result = gameService.findByList(listId);
 		return result;
 	}
