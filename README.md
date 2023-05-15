@@ -35,10 +35,10 @@ Pré-requisitos: Java 11
 
 ```bash
 # clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
+git clone https://github.com/gustavorenedev/dslist
 
 # entrar na pasta do projeto back end
-cd backend
+cd dslist
 
 # executar o projeto
 ./mvnw spring-boot:run
